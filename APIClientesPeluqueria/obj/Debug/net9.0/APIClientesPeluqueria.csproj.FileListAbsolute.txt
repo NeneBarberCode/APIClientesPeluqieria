@@ -164,3 +164,6 @@ C:\Users\New User\source\repos\APIClientesPeluqueria\APIClientesPeluqueria\obj\D
 C:\Users\New User\source\repos\APIClientesPeluqueria\APIClientesPeluqueria\obj\Debug\net9.0\APIClientesPeluqueria.pdb
 C:\Users\New User\source\repos\APIClientesPeluqueria\APIClientesPeluqueria\obj\Debug\net9.0\APIClientesPeluqueria.genruntimeconfig.cache
 C:\Users\New User\source\repos\APIClientesPeluqueria\APIClientesPeluqueria\obj\Debug\net9.0\ref\APIClientesPeluqueria.dll
+C:\Users\New User\source\repos\APIClientesPeluqueria\APIClientesPeluqueria\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\New User\source\repos\APIClientesPeluqueria\APIClientesPeluqueria\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\New User\source\repos\APIClientesPeluqueria\APIClientesPeluqueria\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
