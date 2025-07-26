@@ -167,3 +167,4 @@ C:\Users\New User\source\repos\APIClientesPeluqueria\APIClientesPeluqueria\obj\D
 C:\Users\New User\source\repos\APIClientesPeluqueria\APIClientesPeluqueria\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\New User\source\repos\APIClientesPeluqueria\APIClientesPeluqueria\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\New User\source\repos\APIClientesPeluqueria\APIClientesPeluqueria\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\New User\source\repos\APIClientesPeluqueria\APIClientesPeluqueria\bin\Debug\net9.0\AutoMapper.dll

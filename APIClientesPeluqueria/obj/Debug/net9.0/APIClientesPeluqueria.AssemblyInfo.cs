@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APIClientesPeluqueria")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73f06f956da2f262e94cb341d04234dd1836c3af")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a634ad9209ad64a878c4f95af641fa1b0658884b")]
 [assembly: System.Reflection.AssemblyProductAttribute("APIClientesPeluqueria")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APIClientesPeluqueria")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

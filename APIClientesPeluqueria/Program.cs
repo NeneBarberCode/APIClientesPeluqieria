@@ -1,4 +1,5 @@
 using APIClientesPeluqueria.Context;
+using APIClientesPeluqueria.Profiles;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,9 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<ApplicationContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddAutoMapper( config => {} ,typeof(Program));
+
 
 builder.Services.AddSwaggerGen();
 

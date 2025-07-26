@@ -1,5 +1,7 @@
 ﻿using APIClientesPeluqueria.Context;
+using APIClientesPeluqueria.DTOs;
 using APIClientesPeluqueria.Models;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,37 +12,48 @@ namespace APIClientesPeluqueria.Controllers
     public class HairCutController : ControllerBase
     {
         private readonly ApplicationContext context;
+        private readonly IMapper mapper;
 
-        public HairCutController(ApplicationContext _context) 
+        public HairCutController(ApplicationContext _context, IMapper mapper) 
         {
             context = _context;
+            this.mapper = mapper;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<HairCut>>> Get()
+        public async Task<ActionResult<IEnumerable<HaircutDTO>>> Gethaircuts()
         {
-            return await context.hairCuts.ToListAsync();
+            var haircut = await context.hairCuts.ToListAsync();
+            var haircurDTO = mapper.Map<IEnumerable<HaircutDTO>>(haircut);
+
+            return Ok(haircurDTO);
         }
 
         [HttpGet("{id:int}")]
-        public async Task<ActionResult> Get(int id)
+        public async Task<ActionResult<HaircutsWithCustomers>> Get(int id)
         {
-          var exist = await context.hairCuts.FirstOrDefaultAsync(x => x.Id == id);
+          var haircut = await context.hairCuts
+                .Include(x => x.Customers)
+                .ThenInclude(x => x.Customer)
+                .FirstOrDefaultAsync(x => x.Id == id);
 
-            if (exist == null)
+            if (haircut == null)
             {
                 return NotFound();
             }
-            context.Add(exist);
-            return Ok(exist);   
+          var haircutDTO = mapper.Map<HaircutsWithCustomers>(haircut);
+            return Ok(haircutDTO);   
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post(HairCut hairCut)
+        public async Task<ActionResult> Post(HaircutDTO haircutDTO)
         {
+
+            var hairCut = mapper.Map<HairCut>(haircutDTO);
+
             context.Add(hairCut);
             await context.SaveChangesAsync();
-            return Created();
+            return CreatedAtAction(nameof(Gethaircuts), new { hairCut.Name, hairCut.Cost });
         }
 
         [HttpPut("{id:int}")]

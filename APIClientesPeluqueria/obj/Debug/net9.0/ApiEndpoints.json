@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "APIClientesPeluqueria.Controllers.CustumerController",
-    "Method": "Get",
+    "Method": "GetCustomers",
     "RelativePath": "api/clientes",
     "HttpMethod": "GET",
     "IsController": true,
@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[APIClientesPeluqueria.Models.Customer, APIClientesPeluqueria, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[APIClientesPeluqueria.DTOs.CustomerDTO, APIClientesPeluqueria, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -28,12 +28,22 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "customer",
-        "Type": "APIClientesPeluqueria.Models.Customer",
+        "Name": "customerDTO",
+        "Type": "APIClientesPeluqueria.DTOs.CustomerDTO",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "APIClientesPeluqueria.DTOs.CustomerDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "APIClientesPeluqueria.Controllers.CustumerController",
@@ -49,7 +59,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "APIClientesPeluqueria.DTOs.CustomersWithHaircutsDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "APIClientesPeluqueria.Controllers.CustumerController",
@@ -90,7 +110,7 @@
   },
   {
     "ContainingType": "APIClientesPeluqueria.Controllers.HairCutController",
-    "Method": "Get",
+    "Method": "Gethaircuts",
     "RelativePath": "api/cortes",
     "HttpMethod": "GET",
     "IsController": true,
@@ -98,7 +118,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[APIClientesPeluqueria.Models.HairCut, APIClientesPeluqueria, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[APIClientesPeluqueria.DTOs.HaircutDTO, APIClientesPeluqueria, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -117,8 +137,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "hairCut",
-        "Type": "APIClientesPeluqueria.Models.HairCut",
+        "Name": "haircutDTO",
+        "Type": "APIClientesPeluqueria.DTOs.HaircutDTO",
         "IsRequired": true
       }
     ],
@@ -138,7 +158,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "APIClientesPeluqueria.DTOs.HaircutsWithCustomers",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "APIClientesPeluqueria.Controllers.HairCutController",
